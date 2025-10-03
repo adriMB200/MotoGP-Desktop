@@ -10,4 +10,22 @@ body {
     font-weight: 400;
     line-height: 1.5;
     color: #000;
+    background-color: #FFFFFF;
+}
+
+header {
+    background-color: #0000EE;
+    padding: 10px 0;
+    text-align: center;
+    border-bottom: 2px solid #000;
+}
+
+/* Selector: h1 → especificidad 0-0-1 */
+h1 a {
+    color: #FFFFFF;
+}
+
+nav a {
+    text-decoration: none;
+    color: #FFFFFF;
 }
