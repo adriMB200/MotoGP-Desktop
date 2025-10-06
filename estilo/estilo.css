@@ -10,17 +10,26 @@ body {
 
 header {
     background-color: #0000EE;
-    padding: 10px 0;
-    border-bottom: 2px solid #000;
 }
 
+header a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
 
-/* Selector: h1 → especificidad 0-0-1 */
+p a {
+    color: #0000EE;
+    text-decoration: none;
+}
+
+/*especificidad 001, 001 */
 h1 a {
     color: #FFFFFF;
 }
 
-nav a {
+/*especificidad 001, 001 */
+nav,
+a {
     text-decoration: none;
     color: #FFFFFF;
 }
