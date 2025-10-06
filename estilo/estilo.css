@@ -27,6 +27,11 @@ h1 a {
     color: #FFFFFF;
 }
 
+a.active {
+    font-weight: bold;
+    color: #AFFDCC;
+}
+
 /*especificidad 001, 001 */
 nav,
 a {
