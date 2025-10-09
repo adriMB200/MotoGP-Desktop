@@ -17,6 +17,11 @@ header a {
     text-decoration: none;
 }
 
+header+p {
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+}
+
 p a {
     color: #0000EE;
     text-decoration: none;
