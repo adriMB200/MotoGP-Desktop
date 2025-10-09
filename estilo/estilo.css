@@ -9,11 +9,11 @@ body {
 }
 
 header {
-    background-color: #0000EE;
+    background-color: #0D1B2A;
 }
 
 header a {
-    color: #FFFFFF;
+    color: #F9FAFB;
     text-decoration: none;
 }
 
@@ -29,7 +29,7 @@ h1 a {
 
 a.active {
     font-weight: bold;
-    color: #AFFDCC;
+    color: #FFD60A;
 }
 
 /*especificidad 001, 001 */
