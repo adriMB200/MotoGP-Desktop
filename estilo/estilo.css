@@ -14,7 +14,7 @@ header {
 
 header a {
     color: #F9FAFB;
-    text-decoration: none;
+    text-decoration-line: none;
 }
 
 header+p {
