@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE circuito SYSTEM "circuito.dtd">
+<circuito>
+    <nombre>Lusail International Circuit</nombre>
+
+    <datosFisicos>
+        <longitud>5419</longitud>
+        <anchura>12</anchura>
+    </datosFisicos>
+
+    <evento>
+        <fecha>2025-04-13</fecha>
+        <hora>19:00</hora>
+        <numVueltas>22</numVueltas>
+        <patrocinador>Qatar Airways</patrocinador>
+    </evento>
+
+    <localizacion>
+        <localidad>Lusail (cerca de Doha)</localidad>
+        <pais>Qatar</pais>
+
+        <origen descripcion="centro de la pista, línea de salida">
+            <longitud>51.4525</longitud>
+            <latitud>25.4873</latitud>
+            <altitud>5</altitud>
+        </origen>
+    </localizacion>
+
+    <tramos>
+        <tramo id="t1">
+            <distancia unidad="m">1200</distancia>
+            <coordenadas>
+                <longitud>51.4525</longitud>
+                <latitud>25.4873</latitud>
+                <altitud>5</altitud>
+            </coordenadas>
+            <sector>1</sector>
+        </tramo>
+
+        <tramo id="t2">
+            <distancia unidad="m">2200</distancia>
+            <coordenadas>
+
+                <longitud>51.4555</longitud>
+                <latitud>25.4868</latitud>
+                <altitud>5</altitud>
+            </coordenadas>
+            <sector>2</sector>
+        </tramo>
+
+        <tramo id="t3">
+            <distancia unidad="m">2019</distancia>
+            <coordenadas>
+
+                <longitud>51.4510</longitud>
+                <latitud>25.4890</latitud>
+                <altitud>5</altitud>
+            </coordenadas>
+            <sector>3</sector>
+        </tramo>
+    </tramos>
+
+
+    <resultado>
+        <vencedor>
+            <nombrePiloto>Marc Márquez</nombrePiloto>
+        </vencedor>
+
+        <tiempo>41m 29.186s</tiempo>
+    </resultado>
+
+    <clasificacionMundial>
+        <piloto>
+            <posicion>1</posicion>
+            <nombre>Marc Márquez</nombre>
+            <puntos>123</puntos>
+        </piloto>
+        <piloto>
+            <posicion>2</posicion>
+            <nombre>Álex Márquez</nombre>
+            <puntos>106</puntos>
+        </piloto>
+        <piloto>
+            <posicion>3</posicion>
+            <nombre>Francesco Bagnaia</nombre>
+            <puntos>97</puntos>
+        </piloto>
+    </clasificacionMundial>
+
+    <referencias>
+        <ref tipo="oficial"
+            href="https://www.motogp.com/en/gp-results/2025/qat/motogp/rac/classification">MotoGP —
+            Resultados oficiales Qatar 2025</ref>
+        <ref tipo="prensa"
+            href="https://www.reuters.com/en/marc-marquez-wins-qatar-grand-prix-despite-lap-one-collision-2025-04-13/">Reuters
+            — Marc Marquez wins Qatar Grand Prix (13 Apr 2025)</ref>
+        <ref tipo="reportaje"
+            href="https://www.crash.net/motogp/results/1067917/1/2025-qatar-motogp-lusail-race-results">Crash.net
+            — 2025 Qatar MotoGP Race Results (14 Apr 2025)</ref>
+    </referencias>
+
+    <galeriaFotos>
+        <foto fichero="multimedia/Panorama.jpg" titulo="Panorama del circuito">Panorama.jpg</foto>
+        <foto fichero="multimedia/RectaMeta.jpg" titulo="Recta de meta">RectaMeta.jpg</foto>
+    </galeriaFotos>
+    <galeriaVideos>
+        <video fichero="multimedia/RaceHighlights.mp4" titulo="Resumen carrera Qatar 2025">
+            RaceHighlights.mp4</video>
+    </galeriaVideos>
+
+</circuito>

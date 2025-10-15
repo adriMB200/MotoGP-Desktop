@@ -1,0 +1,70 @@
+<!-- DTD para circuito.xml del Lusail International Circuit -->
+
+<!ELEMENT circuito (nombre, datosFisicos, evento, localizacion, tramos, resultado, clasificacionMundial, referencias, galeriaFotos, galeriaVideos)>
+
+<!-- Nombre del circuito -->
+<!ELEMENT nombre (#PCDATA)>
+
+<!-- Datos físicos -->
+<!ELEMENT datosFisicos (longitud, anchura)>
+<!ELEMENT longitud (#PCDATA)>
+<!ELEMENT anchura (#PCDATA)>
+
+<!-- Evento -->
+<!ELEMENT evento (fecha, hora, numVueltas, patrocinador)>
+<!ELEMENT fecha (#PCDATA)>
+<!ELEMENT hora (#PCDATA)>
+<!ELEMENT numVueltas (#PCDATA)>
+<!ELEMENT patrocinador (#PCDATA)>
+
+<!-- Localización -->
+<!ELEMENT localizacion (localidad, pais, origen)>
+<!ELEMENT localidad (#PCDATA)>
+<!ELEMENT pais (#PCDATA)>
+<!ELEMENT origen (longitud, latitud, altitud)>
+<!ATTLIST origen descripcion CDATA #IMPLIED>
+<!ELEMENT latitud (#PCDATA)>
+<!ELEMENT altitud (#PCDATA)>
+
+<!-- Tramos -->
+<!ELEMENT tramos (tramo+)>
+<!ELEMENT tramo (distancia, coordenadas, sector)>
+<!ATTLIST tramo id ID #REQUIRED>
+<!ELEMENT distancia (#PCDATA)>
+<!ATTLIST distancia unidad CDATA #IMPLIED>
+<!ELEMENT coordenadas (longitud, latitud, altitud)>
+<!ELEMENT sector (#PCDATA)>
+
+<!-- Resultado -->
+<!ELEMENT resultado (vencedor, tiempo)>
+<!ELEMENT vencedor (nombrePiloto)>
+<!ELEMENT nombrePiloto (#PCDATA)>
+<!ELEMENT tiempo (#PCDATA)>
+
+<!-- Clasificación mundial -->
+<!ELEMENT clasificacionMundial (piloto+)>
+<!ELEMENT piloto (posicion, nombre, puntos)>
+<!ELEMENT posicion (#PCDATA)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT puntos (#PCDATA)>
+
+<!-- Referencias -->
+<!ELEMENT referencias (ref+)>
+<!ELEMENT ref (#PCDATA)>
+<!ATTLIST ref
+    tipo CDATA #IMPLIED
+    href CDATA #IMPLIED>
+
+<!-- Galería de fotos -->
+<!ELEMENT galeriaFotos (foto+)>
+<!ELEMENT foto (#PCDATA)>
+<!ATTLIST foto
+    fichero CDATA #REQUIRED
+    titulo CDATA #IMPLIED>
+
+<!-- Galería de videos -->
+<!ELEMENT galeriaVideos (video+)>
+<!ELEMENT video (#PCDATA)>
+<!ATTLIST video
+    fichero CDATA #REQUIRED
+    titulo CDATA #IMPLIED>
