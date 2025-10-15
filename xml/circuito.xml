@@ -1,111 +1,98 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE circuito SYSTEM "circuito.dtd">
 <circuito>
-    <nombre>Lusail International Circuit</nombre>
+    <nombre>MotorLand Aragón</nombre>
 
     <datosFisicos>
-        <longitud>5419</longitud>
-        <anchura>12</anchura>
+        <longitudCircuito>5078</longitudCircuito>
+        <anchura>15</anchura>
     </datosFisicos>
 
     <evento>
-        <fecha>2025-04-13</fecha>
-        <hora>19:00</hora>
-        <numVueltas>22</numVueltas>
-        <patrocinador>Qatar Airways</patrocinador>
+        <fecha>2025-09-28</fecha>
+        <hora>14:00</hora>
+        <vueltas>23</vueltas>
+        <patrocinador>Gran Premio Tissot de Aragón</patrocinador>
     </evento>
 
     <localizacion>
-        <localidad>Lusail (cerca de Doha)</localidad>
-        <pais>Qatar</pais>
-
-        <origen descripcion="centro de la pista, línea de salida">
-            <longitud>51.4525</longitud>
-            <latitud>25.4873</latitud>
-            <altitud>5</altitud>
+        <localidad>Alcañiz</localidad>
+        <pais>España</pais>
+        <origen>
+            <longitud>-0.2136</longitud>
+            <latitud>41.0792</latitud>
+            <altitud>380</altitud>
         </origen>
     </localizacion>
 
     <tramos>
-        <tramo id="t1">
-            <distancia unidad="m">1200</distancia>
+        <tramo>
+            <distancia unidad="metros">1047</distancia>
             <coordenadas>
-                <longitud>51.4525</longitud>
-                <latitud>25.4873</latitud>
-                <altitud>5</altitud>
+                <longitud>-0.2195</longitud>
+                <latitud>41.0772</latitud>
+                <altitud>375</altitud>
             </coordenadas>
             <sector>1</sector>
         </tramo>
-
-        <tramo id="t2">
-            <distancia unidad="m">2200</distancia>
+        <tramo>
+            <distancia unidad="metros">2031</distancia>
             <coordenadas>
-
-                <longitud>51.4555</longitud>
-                <latitud>25.4868</latitud>
-                <altitud>5</altitud>
+                <longitud>-0.2130</longitud>
+                <latitud>41.0850</latitud>
+                <altitud>385</altitud>
             </coordenadas>
             <sector>2</sector>
         </tramo>
-
-        <tramo id="t3">
-            <distancia unidad="m">2019</distancia>
+        <tramo>
+            <distancia unidad="metros">2000</distancia>
             <coordenadas>
-
-                <longitud>51.4510</longitud>
-                <latitud>25.4890</latitud>
-                <altitud>5</altitud>
+                <longitud>-0.2136</longitud>
+                <latitud>41.0792</latitud>
+                <altitud>380</altitud>
             </coordenadas>
             <sector>3</sector>
         </tramo>
     </tramos>
 
-
     <resultado>
         <vencedor>
-            <nombrePiloto>Marc Márquez</nombrePiloto>
+            <nombrePiloto>Francesco Bagnaia</nombrePiloto>
         </vencedor>
-
-        <tiempo>41m 29.186s</tiempo>
+        <tiempo>41m 35.456s</tiempo>
     </resultado>
 
     <clasificacionMundial>
         <piloto>
             <posicion>1</posicion>
-            <nombre>Marc Márquez</nombre>
-            <puntos>123</puntos>
+            <nombre>Francesco Bagnaia</nombre>
+            <puntos>250</puntos>
         </piloto>
         <piloto>
             <posicion>2</posicion>
-            <nombre>Álex Márquez</nombre>
-            <puntos>106</puntos>
+            <nombre>Marc Márquez</nombre>
+            <puntos>235</puntos>
         </piloto>
         <piloto>
             <posicion>3</posicion>
-            <nombre>Francesco Bagnaia</nombre>
-            <puntos>97</puntos>
+            <nombre>Jorge Martín</nombre>
+            <puntos>228</puntos>
         </piloto>
     </clasificacionMundial>
 
     <referencias>
-        <ref tipo="oficial"
-            href="https://www.motogp.com/en/gp-results/2025/qat/motogp/rac/classification">MotoGP —
-            Resultados oficiales Qatar 2025</ref>
-        <ref tipo="prensa"
-            href="https://www.reuters.com/en/marc-marquez-wins-qatar-grand-prix-despite-lap-one-collision-2025-04-13/">Reuters
-            — Marc Marquez wins Qatar Grand Prix (13 Apr 2025)</ref>
-        <ref tipo="reportaje"
-            href="https://www.crash.net/motogp/results/1067917/1/2025-qatar-motogp-lusail-race-results">Crash.net
-            — 2025 Qatar MotoGP Race Results (14 Apr 2025)</ref>
+        <ref href="https://www.motorlandaragon.com/">Página oficial de MotorLand Aragón</ref>
+        <ref href="https://es.wikipedia.org/wiki/MotorLand_Arag%C3%B3n">Wikipedia: MotorLand Aragón</ref>
+        <ref href="https://www.motogp.com/es/gp-results/2024/ara">Resultados oficiales de MotoGP</ref>
     </referencias>
 
     <galeriaFotos>
-        <foto fichero="multimedia/Panorama.jpg" titulo="Panorama del circuito">Panorama.jpg</foto>
-        <foto fichero="multimedia/RectaMeta.jpg" titulo="Recta de meta">RectaMeta.jpg</foto>
+        <foto fichero="media/aragon_pano.jpg" titulo="Vista panorámica del circuito">aragon_pano.jpg</foto>
+        <foto fichero="media/aragon_recta.jpg" titulo="Recta de meta de MotorLand">aragon_recta.jpg</foto>
     </galeriaFotos>
+
     <galeriaVideos>
-        <video fichero="multimedia/RaceHighlights.mp4" titulo="Resumen carrera Qatar 2025">
-            RaceHighlights.mp4</video>
+        <video fichero="media/aragon_resumen.mp4" titulo="Resumen de la carrera">aragon_resumen.mp4</video>
     </galeriaVideos>
 
 </circuito>
