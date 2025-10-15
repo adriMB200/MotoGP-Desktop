@@ -4,7 +4,9 @@
 
 <!ELEMENT datosFisicos (longitudCircuito, anchura)>
 <!ELEMENT longitudCircuito (#PCDATA)>
+<!ATTLIST longitudCircuito unidad CDATA #REQUIRED>
 <!ELEMENT anchura (#PCDATA)>
+<!ATTLIST anchura unidad CDATA #REQUIRED>
 
 <!ELEMENT evento (fecha, hora, vueltas, patrocinador)>
 <!ELEMENT fecha (#PCDATA)>
@@ -17,8 +19,11 @@
 <!ELEMENT pais (#PCDATA)>
 <!ELEMENT origen (longitud, latitud, altitud)>
 <!ELEMENT longitud (#PCDATA)>
+<!ATTLIST longitud unidad CDATA #REQUIRED>
 <!ELEMENT latitud (#PCDATA)>
+<!ATTLIST latitud unidad CDATA #REQUIRED>
 <!ELEMENT altitud (#PCDATA)>
+<!ATTLIST altitud unidad CDATA #REQUIRED>
 
 <!ELEMENT tramos (tramo+)>
 <!ELEMENT tramo (distancia, coordenadas, sector)>
