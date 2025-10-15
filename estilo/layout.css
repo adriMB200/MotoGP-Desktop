@@ -2,13 +2,13 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: left;
-    padding: 1rem;
+    padding: 1em;
     flex-wrap: wrap;
 }
 
 header nav {
     display: flex;
-    gap: 1rem;
+    gap: 1em;
     align-items: center;
 }
 
@@ -21,7 +21,7 @@ header nav {
 
     header nav {
         justify-content: center;
-        margin-top: 0.5rem;
+        margin-top: 0.5em;
     }
 
     header+p {
