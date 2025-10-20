@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<circuito
+    xsi:schemaLocation="http://www.uniovi.es circuito.xsd"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://www.uniovi.es">
+    <nombre>Lusail International Circuit</nombre>
+
+    <datosFisicos>
+        <longitudCircuito unidad="metros">5380</longitudCircuito>
+        <anchura unidad="metros">12</anchura>
+    </datosFisicos>
+
+    <evento>
+        <fecha>2026-03-01</fecha>
+        <hora>18:00</hora>
+        <vueltas>22</vueltas>
+        <patrocinador>Gran Premio de Qatar Airways</patrocinador>
+    </evento>
+
+    <localizacion>
+        <localidad>Lusail</localidad>
+        <pais>Qatar</pais>
+        <origen>
+            <longitud unidad="grados">51.4552</longitud>
+            <latitud unidad="grados">25.4907</latitud>
+            <altitud unidad="metros">1</altitud>
+        </origen>
+    </localizacion>
+
+    <tramos>
+        <tramo>
+            <distancia unidad="metros">1800</distancia>
+            <coordenadas>
+                <longitud unidad="grados">51.4560</longitud>
+                <latitud unidad="grados">25.4890</latitud>
+                <altitud unidad="metros">1</altitud>
+            </coordenadas>
+            <sector>1</sector>
+        </tramo>
+        <tramo>
+            <distancia unidad="metros">1800</distancia>
+            <coordenadas>
+                <longitud unidad="grados">51.4580</longitud>
+                <latitud unidad="grados">25.4920</latitud>
+                <altitud unidad="metros">2</altitud>
+            </coordenadas>
+            <sector>2</sector>
+        </tramo>
+        <tramo>
+            <distancia unidad="metros">1780</distancia>
+            <coordenadas>
+                <longitud unidad="grados">51.4552</longitud>
+                <latitud unidad="grados">25.4907</latitud>
+                <altitud unidad="metros">1</altitud>
+            </coordenadas>
+            <sector>3</sector>
+        </tramo>
+    </tramos>
+
+    <resultado>
+        <vencedor>
+            <nombrePiloto>Marc Márquez</nombrePiloto>
+        </vencedor>
+        <tiempo>42m 40.123s</tiempo>
+    </resultado>
+
+    <clasificacionMundial>
+        <piloto>
+            <posicion>1</posicion>
+            <nombre>Marc Márquez</nombre>
+            <puntos>260</puntos>
+        </piloto>
+        <piloto>
+            <posicion>2</posicion>
+            <nombre>Francesco Bagnaia</nombre>
+            <puntos>240</puntos>
+        </piloto>
+        <piloto>
+            <posicion>3</posicion>
+            <nombre>Jorge Martín</nombre>
+            <puntos>230</puntos>
+        </piloto>
+    </clasificacionMundial>
+
+    <referencias>
+        <ref href="https://www.circuitlusail.com/">Página oficial de Lusail International Circuit</ref>
+        <ref href="https://es.wikipedia.org/wiki/Circuito_Internacional_de_Lusail">Wikipedia:
+            Circuito Internacional de Lusail</ref>
+        <ref href="https://www.motogp.com/es/gp-results/2026/qatar">Resultados oficiales de MotoGP
+            Qatar</ref>
+    </referencias>
+
+    <galeriaFotos>
+        <foto fichero="media/lusail_noche.jpg" titulo="Circuito de Lusail iluminado">
+            lusail_noche.jpg</foto>
+        <foto fichero="media/marquez_lusail.jpg" titulo="Marc Márquez en Lusail">marquez_lusail.jpg</foto>
+    </galeriaFotos>
+
+    <galeriaVideos>
+        <video fichero="media/lusail_resumen.mp4" titulo="Resumen de la carrera en Lusail">
+            lusail_resumen.mp4</video>
+    </galeriaVideos>
+
+</circuito>
