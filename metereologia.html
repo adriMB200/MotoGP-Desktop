@@ -16,6 +16,8 @@
 
     <link rel="stylesheet" type="text/css" href="estilo/estilo.css" />
 
+    <script src="js/ciudad.js"></script>
+
 </head>
 
 <body>
@@ -36,8 +38,22 @@
     </header>
     <p>Estás en: <a href="index.html">Inicio</a> >> <strong>Meteorología</strong></p>
 
-    <p>en desarrollo</p>
     <h2>Meteorología de MotoGP-Desktop</h2>
+
+    <script>
+        const doha = new Ciudad("Doha", "Catar", "Qatarí", 1449400, { latitud: 25.276987, longitud: 51.520008 });
+
+        doha.inicializarDatos(1449400, 25.276987, 51.520008);
+
+        document.write(doha.getNombre());
+
+        document.write(doha.getPais());
+
+        document.write(doha.getInfoSecundaria());
+
+        doha.escribirCoordenadas();
+    </script>
+
 </body>
 
 </html>
