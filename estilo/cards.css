@@ -4,19 +4,23 @@
 /* Regla con el estilo general para las tarjetas del juego */
 /* especificidad: 002 */
 main article {
-    width: 20vw;
-    height: 20em;
+    width: 13vw;
+    height: 10em;
     position: relative;
     transform: scale(1);
     cursor: pointer;
     transform-style: preserve-3d;
     transition: transform .5s;
-    box-shadow: 0.1em 0.1em 0.1em rgba(0,0,0,.3);
+    box-shadow: 0.1em 0.1em 0.1em rgba(0, 0, 0, .3);
 }
 
 /* Regla con la transformación que permite girar la carta cuando se le pone el atributo personalizado data-estado al valor volteada */
 /* especificidad: 012 */
 main article[data-estado=volteada] {
+    transform: rotateY(180deg);
+}
+
+main article[data-estado=revelada] {
     transform: rotateY(180deg);
 }
 

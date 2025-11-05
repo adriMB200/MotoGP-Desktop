@@ -7,7 +7,7 @@ class juegoMemoria {
     }
 
     voltearCarta(carta) {
-        if (!this.tablero_bloqueado) return;
+        if (this.tablero_bloqueado || carta.dataset.estado === "revelada") return;
         carta.dataset.estado = "volteada";
 
         if (!this.primera_carta) {
@@ -18,12 +18,26 @@ class juegoMemoria {
         this.segunda_carta = carta;
         this.compararCartas();
     }
+    cubrirCartas() {
+        if (this.primera_carta.dataset.estado === "volteada"
+            && this.segunda_carta.dataset.estado === "volteada") {
+
+            this.primera_carta.removeAttribute("data-estado");
+            this.segunda_carta.removeAttribute("data-estado");
+
+            this.reiniciarAtributos();
+        }
+    }
+
 
     compararCartas() {
-        const img1 = this.primera_carta.querySelector("img").src;
-        const img2 = this.segunda_carta.querySelector("img").src;
+        this.tablero_bloqueado = true;
+        const img1 = this.primera_carta.children[1].getAttribute("src");
+        const img2 = this.segunda_carta.children[1].getAttribute("src");
 
-        img1 === img2 ? this.deshabilitarCartas() : this.cubrirCartas();
+        setTimeout(() => {
+            img1 === img2 ? this.deshabilitarCartas() : this.cubrirCartas();
+        }, 1500);
     }
 
     barajarCartas() {
@@ -36,10 +50,12 @@ class juegoMemoria {
         }
 
         cartas.forEach(carta => main.appendChild(carta));
+
+        this.tablero_bloqueado = false;
     }
 
     reiniciarAtributos() {
-        this.tablero_bloqueado = true;
+        this.tablero_bloqueado = false;
         this.primera_carta = null;
         this.segunda_carta = null;
     }
@@ -52,10 +68,14 @@ class juegoMemoria {
     }
 
     comprobarJuego() {
-        const cartas_reveladas = document.querySelectorAll('main article');
+        const main = document.querySelector("main");
+        let cartas = Array.from(main.querySelectorAll("article"));
 
-        const todasReveladas = Array.from(cartas).every(carta => carta.dataset.estado === "revelada");
+        for (let i = cartas.length - 1; i > 0; i--) {
+            if (cartas[i].dataset.estado !== "revelada") return;
+        }
 
+        const mensaje = document.createElement("p");
         mensaje.textContent = "🎉 ¡Has completado el juego! 🎉";
         main.appendChild(mensaje);
     }
