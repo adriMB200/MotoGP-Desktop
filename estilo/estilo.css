@@ -43,3 +43,7 @@ a {
     text-decoration: none;
     color: #FFFFFF;
 }
+
+li a {
+    color: #0000EE;
+}

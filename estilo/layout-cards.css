@@ -7,3 +7,15 @@ main {
     justify-items: center;
     align-items: center;
 }
+
+@media (min-width: 320px) and (max-width: 799px) {
+    main {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto repeat(6, 1fr);
+        gap: 1em;
+        padding: 1em;
+        justify-items: center;
+        align-items: center;
+    }
+}

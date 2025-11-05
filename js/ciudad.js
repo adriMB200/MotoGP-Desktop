@@ -1,12 +1,10 @@
 "use strict";
 //Ciudad usada Doha en Catar 
 class Ciudad {
-    constructor(nombre, pais, gentilicio, poblacion, coordenadas) {
+    constructor(nombre, pais, gentilicio) {
         this.nombre = nombre;
         this.pais = pais;
         this.gentilicio = gentilicio;
-        this.poblacion = poblacion;
-        this.coordenadas = coordenadas; // 25.28678563337303, 51.53384774116898
     }
 
     inicializarDatos(poblacion, latitud, longitud) {
@@ -16,12 +14,12 @@ class Ciudad {
 
 
     getNombre() {
-        return `Ciudad: ${this.nombre}`;
+        return `Ciudad: ${this.nombre} `;
     }
 
 
     getPais() {
-        return `País: ${this.pais}`;
+        return ` País: ${this.pais}`;
     }
 
 

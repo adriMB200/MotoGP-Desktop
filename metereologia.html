@@ -41,17 +41,17 @@
     <h2>Meteorología de MotoGP-Desktop</h2>
 
     <script>
-        const doha = new Ciudad("Doha", "Catar", "Qatarí", 1449400, { latitud: 25.276987, longitud: 51.520008 });
+        const ciudad = new Ciudad("Lusail", "Catar", "Qatarí");
 
-        doha.inicializarDatos(1449400, 25.276987, 51.520008);
+        ciudad.inicializarDatos(1449400, 25.276987, 51.520008);
 
-        document.write(doha.getNombre());
+        document.write(ciudad.getNombre());
 
-        document.write(doha.getPais());
+        document.write(ciudad.getPais());
 
-        document.write(doha.getInfoSecundaria());
+        document.write(ciudad.getInfoSecundaria());
 
-        doha.escribirCoordenadas();
+        ciudad.escribirCoordenadas();
     </script>
 
 </body>
