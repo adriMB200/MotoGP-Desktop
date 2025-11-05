@@ -4,6 +4,10 @@ class juegoMemoria {
         this.tablero_bloqueado = true;
         this.primera_carta = null;
         this.segunda_carta = null;
+
+        this.cronometro = new Cronometro();
+        this.cronometro.reiniciar();
+        this.cronometro.arrancar();
     }
 
     voltearCarta(carta) {
@@ -52,6 +56,7 @@ class juegoMemoria {
         cartas.forEach(carta => main.appendChild(carta));
 
         this.tablero_bloqueado = false;
+
     }
 
     reiniciarAtributos() {
@@ -74,6 +79,8 @@ class juegoMemoria {
         for (let i = cartas.length - 1; i > 0; i--) {
             if (cartas[i].dataset.estado !== "revelada") return;
         }
+
+        this.cronometro.parar();
 
         const mensaje = document.createElement("p");
         mensaje.textContent = "🎉 ¡Has completado el juego! 🎉";
