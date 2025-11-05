@@ -42,7 +42,6 @@
     <h2><strong>Juego de memoria con cartas</strong></h2>
 
     <main>
-        <script>let memoria = new juegoMemoria()</script>
         <article onclick="memoria.voltearCarta(this)">
             <h3>Memory Card</h3>
             <img src="multimedia/logos/honda.svg" alt="Logo-Honda">
@@ -103,6 +102,10 @@
             <img src="multimedia/logos/motogp.svg" alt="Logo-MotoGP">
         </article>
 
+        <script>
+            let memoria = new juegoMemoria()
+            memoria.barajarCartas()
+        </script>
     </main>
 
 

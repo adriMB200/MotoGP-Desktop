@@ -7,11 +7,16 @@ class Cronometro {
     }
 
     arrancar() {
+        if (this.corriendo) return;
+
         try {
-            this.inicio = Temporal.Now.instant();;
+            this.inicio = Temporal.Instant.fromEpochMilliseconds(
+                Temporal.Now.instant().epochMilliseconds - this.tiempo * 1000
+            );
         } catch (error) {
             this.inicio = new Date.now();
         }
+
 
         this.corriendo = setInterval(this.actualizar.bind(this), 100);
     }
@@ -30,6 +35,7 @@ class Cronometro {
 
     parar() {
         clearInterval(this.corriendo);
+        this.corriendo = null;
     }
 
     mostrar() {
