@@ -16,6 +16,8 @@
 
     <link rel="stylesheet" type="text/css" href="estilo/estilo.css" />
 
+    <script src="js/cronometro.js"></script>
+
 </head>
 
 <body>
@@ -33,14 +35,19 @@
             <a href="ayuda.html" title="Sistema de ayuda">Ayuda</a>
         </nav>
     </header>
-    <p>Estás en: <a href="index.html">Inicio</a> >> <strong>Juegos</strong></p>
+    <p>Estás en: <a href="index.html">Inicio</a> >> <a href="juegos.html">Juegos</a> >><strong>Cronometro</strong></p>
 
-    <h2>Juegos de MotoGP-Desktop</h2>
+    <main>
+        <p>00:00.0</p>
+        <button onclick="cronometro.arrancar()">Arrancar</button>
+        <button onclick="cronometro.parar()">Parar</button>
+        <button onclick="cronometro.reiniciar()">Reiniciar</button>
+    </main>
 
-    <ul>
-        <li><a href="memoria.html">Juego de memoria con cartas</a></li>
-        <li><a href="cronometro.html">Cronómetro</a></li>
-    </ul>
+    <script>
+        const cronometro = new Cronometro();
+    </script>
+
 </body>
 
 </html>
