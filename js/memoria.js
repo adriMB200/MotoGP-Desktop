@@ -1,7 +1,9 @@
 class juegoMemoria {
 
+    constructor() { }
+
     voltearCarta(carta) {
-        carta.dataset.volteada = "true";
+        carta.dataset.estado = "volteada";
     }
 
 }
