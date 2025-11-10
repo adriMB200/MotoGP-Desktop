@@ -2,7 +2,8 @@ main {
     display: grid;
     grid-template-columns: repeat(4, auto);
     grid-template-rows: repeat(3, auto);
-    grid-gap: 1 vw;
+    column-gap: 0.6em;
+    row-gap: 2em;
     justify-content: center;
     align-items: center;
 }
