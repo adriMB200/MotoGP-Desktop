@@ -45,6 +45,14 @@
 
         ciudad.inicializarDatos(1449400, 25.276987, 51.520008);
 
+        const nombre = document.createElement("h1");
+        const pais = document.createElement("h1");
+        const info = document.createElement("h1");
+
+        nombre.textContent = ciudad.getNombre();
+        pais.textContent = ciudad.getPais();
+        info.textContent = ciudad.getInfoSecundaria();
+
         document.write(ciudad.getNombre());
 
         document.write(ciudad.getPais());
