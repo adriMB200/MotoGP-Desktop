@@ -55,6 +55,9 @@ if (count($_POST) > 0)
 }
 
 echo '
+<!DOCTYPE HTML>
+
+<html lang="es">
 <head>
     <link rel="icon" href="multimedia/favicon.ico" />
     <title>MotoGP-Juegos</title>
