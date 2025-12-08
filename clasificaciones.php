@@ -3,43 +3,30 @@ session_start();
 class Clasificacion{
 
     private $documento;
-    private &informacion;
+    private $datos;
+    private $informacion;
 
     public function __construct(){
         $this->documento = "xml/circuitoEsquema.xml";
     }
 
     public function consultar(){
-        $informacion = simplexml_load_file($this->documento);
+        $this->datos = file_get_contents($this->documento);
+        $this->informacion = new SimpleXMLElement($this->datos);
     }
 
-    public function 
+    public function getInformacion() {
+        return $this->informacion;
+    }
 
 }
 
-if (!isset($_SESSION["cronometro"])) {
-    $_SESSION["cronometro"] = new Cronometro();
-}
+$clasificacion = new Clasificacion();
+$clasificacion->consultar();
+$xml = $clasificacion->getInformacion();
+?>
 
-$miCronometro = $_SESSION["cronometro"];
-$mensaje = "";
 
-if (count($_POST) > 0)
-{
-    if (isset($_POST['arrancar'])) {
-        $miCronometro->arrancar();
-    }
-
-    if (isset($_POST['parar'])) {
-        $miCronometro->parar();
-    }
-
-    if (isset($_POST['mostrar'])) {
-        $mensaje = "Tiempo transcurrido: " . $miCronometro->mostrar();
-    }
-}
-
-echo '
 <!DOCTYPE HTML>
 
 <html lang="es">
@@ -78,10 +65,31 @@ echo '
 
     <p>Estás en: <a href="index.html">Inicio</a> >> <strong>Clasificaciones</strong></p>
 
-    <p>en desarrollo</p>
-    <h2>Clasificaciones de MotoGP-Desktop</h2>
+    <h2>Ganador de la carrera</h2>
+
+<p><strong>Vencedor:</strong> <?= $xml->resultado->vencedor->nombrePiloto ?></p>
+<p><strong>Tiempo empleado:</strong> <?= $xml->resultado->tiempo ?></p>
+
+<h2>Clasificación del Mundial tras la carrera</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>Posición</th>
+            <th>Piloto</th>
+            <th>Puntos</th>
+        </tr>
+    </thead>
+    <tbody>
+        <?php foreach ($xml->clasificacionMundial->piloto as $piloto): ?>
+            <tr>
+                <td><?= $piloto->posicion ?></td>
+                <td><?= $piloto->nombre ?></td>
+                <td><?= $piloto->puntos ?></td>
+            </tr>
+        <?php endforeach; ?>
+    </tbody>
+</table>
 </body>
 
 </html>
-';
-?>
