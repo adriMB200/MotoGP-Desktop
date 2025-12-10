@@ -44,6 +44,7 @@ $xml = $clasificacion->getInformacion();
     <title>MotoGP-Clasificaciones</title>
 
     <link rel="stylesheet" type="text/css" href="estilo/estilo.css" />
+    <link rel="stylesheet" type="text/css" href="estilo/layout.css" />
 
 </head>
 

@@ -62,6 +62,7 @@ echo '
     <link rel="icon" href="multimedia/favicon.ico" />
     <title>MotoGP-Juegos</title>
     <link rel="stylesheet" type="text/css" href="estilo/estilo.css" />
+    <link rel="stylesheet" type="text/css" href="estilo/layout.css" />
 </head>
 
 <body>
