@@ -3,14 +3,14 @@
 session_start();
 
 // --- Importar la clase Cronometro desde la raíz ---
-require_once __DIR__.'/Cronometro.php'; // Ajusta la ruta si tu cronómetro está en la raíz
+require_once __DIR__.'/cronometro.php'; // Ajusta la ruta si tu cronómetro está en la raíz
 
 // --- Clase para operaciones en BD ---
 class Configuracion {
     private $host = 'localhost';
     private $user = 'DBUSER2025';
     private $pass = 'DBPSWD2025';
-    private $db = 'UO289792_DB';
+    private $db = 'UO289369_DB';
     private $conn;
 
     public function __construct() {

@@ -1,14 +1,10 @@
 import xml.etree.ElementTree as ET
 
 def xml_to_kml(xml_string):
-    # Parse the XML string
     root = ET.fromstring(xml_string)
-    
-    # Create the KML structure
     kml = ET.Element('kml', xmlns="http://www.opengis.net/kml/2.2")
     document = ET.SubElement(kml, 'Document')
     
-    # Iterate through XML elements and convert to KML Placemarks
     for tramo in root.findall('.//tramo'):
         kml_placemark = ET.SubElement(document, 'Placemark')
         
@@ -24,7 +20,6 @@ def xml_to_kml(xml_string):
         kml_point = ET.SubElement(kml_placemark, 'Point')
         ET.SubElement(kml_point, 'coordinates').text = f"{lon},{lat},{alt}"
     
-    # Convert the KML structure to a string
     kml_string = ET.tostring(kml, encoding='utf-8', method='xml').decode('utf-8')
     return kml_string
 
