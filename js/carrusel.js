@@ -6,9 +6,9 @@ class Carrusel {
     #fotografias;
 
     constructor() {
-        this.#busqueda = "";
+        this.#busqueda = "Qatar, Moto GP, Lusail";
         this.#actual = 0;
-        this.#maximo = 4;
+        this.#maximo = 5;
         this.#fotografias = [];
     }
 
@@ -29,12 +29,29 @@ class Carrusel {
 
     }
 
-    procesarJSONFotografias() {
-        console.log("Fotografías obtenidas:", datos);
+    procesarJSONFotografias(datos) {
+        this.#fotografias = [];
+
+        for (let i = 0; i < this.#maximo; i++) {
+            this.#fotografias.push(datos.items[i].media.m.replace("_m.", "_z."));
+        }
+
+        this.#actual = 0;
     }
 
     mostrarFotografias() {
-        return this.#fotografias[0];
+        let article = $("<article>");
+        let h2 = $("<h2>").text("Imágenes del circuito de Lusail International Circuit");
+        let img = $("<img>")
+            .attr("src", this.#fotografias[this.#actual])
+            .attr("id", "fotoCarrusel");
+
+        article.append(h2);
+        article.append(img);
+
+        $("body").append(article);
+
+        setInterval(this.cambiarFotografia.bind(this), 3000);
     }
 
     cambiarFotografia() {
@@ -43,6 +60,7 @@ class Carrusel {
         } else {
             this.#actual = 0;
         }
+        $("#fotoCarrusel").attr("src", this.#fotografias[this.#actual]);
     }
 
 }
