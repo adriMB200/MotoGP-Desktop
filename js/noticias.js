@@ -14,9 +14,6 @@ class Noticias {
 
         fetch(urlCompleta)
             .then(respuesta => {
-                if (!respuesta.ok) {
-                    throw new Error("Error en la petición");
-                }
                 return respuesta.json();
             })
             .then(datos => this.procesarInformacion(datos))
@@ -38,11 +35,10 @@ class Noticias {
 
             article.append(
                 `<p>
-                    <a href="${noticia.url}" target="_blank">Leer noticia completa</a>
+                    <a href="${noticia.url}">Leer noticia completa</a>
                     <br><small>Fuente: ${noticia.source}</small>
                 </p>`
             );
-
             section.append(article);
         });
 

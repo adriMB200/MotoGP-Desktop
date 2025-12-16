@@ -1,4 +1,4 @@
-"use strict";
+
 class Ciudad {
     constructor(nombre, pais, gentilicio) {
         this.nombre = nombre;
