@@ -22,9 +22,6 @@ class Carrusel {
                 format: "json"
             },
             success: this.procesarJSONFotografias.bind(this),
-            error: function (jqXHR, textStatus, errorThrown) {
-                console.error("Error al obtener las fotografías:", textStatus, errorThrown);
-            }
         });
 
     }
