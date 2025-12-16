@@ -17,6 +17,7 @@
     <link rel="stylesheet" type="text/css" href="estilo/estilo.css" />
     <link rel="stylesheet" type="text/css" href="estilo/layout.css" />
 
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="js/ciudad.js"></script>
 
 
@@ -56,15 +57,12 @@
         info.textContent = ciudad.getInfoSecundaria();
 
         document.write(ciudad.getNombre());
-
         document.write(ciudad.getPais());
-
         document.write(ciudad.getInfoSecundaria());
-
         ciudad.escribirCoordenadas();
 
-        ciudad.getMeteorologiaCarrera();
-        ciudad.mostrarMeteorologiaCarrera();
+        ciudad.getMetereologiaCarrera();
+        ciudad.getMetereologiaEntrenos();
 
     </script>
 

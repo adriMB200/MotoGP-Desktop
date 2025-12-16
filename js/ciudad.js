@@ -51,7 +51,10 @@ class Ciudad {
                 daily: "sunrise,sunset",
                 timezone: "auto"
             },
-            success: this.procesarJSONcarrera.bind(this),
+            success: function (datos) {
+                this.procesarJSONcarrera(datos);
+                this.mostrarMeteorologiaCarrera();
+            }.bind(this)
         });
     }
 
@@ -69,20 +72,23 @@ class Ciudad {
         };
     }
 
-    getMetereologiaEntregos() {
+    getMetereologiaEntrenos() {
         $.ajax({
             dataType: "json",
             url: "https://archive-api.open-meteo.com/v1/archive?",
             data: {
                 latitude: this.coordenadas.latitud,
                 longitude: this.coordenadas.longitud,
-                start_date: "2024-03-6",
-                end_date: "2024-03-9",
+                start_date: "2024-03-06",
+                end_date: "2024-03-09",
                 hourly: "temperature_2m,apparent_temperature,precipitation,relative_humidity_2m,wind_speed_10m,wind_direction_10m",
                 daily: "sunrise,sunset",
                 timezone: "auto"
             },
-            success: this.procesarJSONentrenos.bind(this),
+            success: function (datos) {
+                this.procesarJSONentrenos(datos);
+                this.mostrarMeteorologiaEntrenos();
+            }.bind(this)
         });
     }
 
@@ -160,10 +166,21 @@ class Ciudad {
         tabla.append(thead);
 
         let tbody = $("<tbody>");
-        let datos = this.meteorologiaCarrera;
+        let datos = this.meteorologiaEntrenos;
+
+        let diaActual = "";
+
         for (let i = 0; i < datos.horas.length; i++) {
+            let fechaHora = datos.horas[i];
+            let dia = fechaHora.split("T")[0];
+
+            if (dia !== diaActual) {
+                diaActual = dia;
+                tbody.append(`<tr><td colspan="7"><strong>Día ${dia}</strong></td></tr>`);
+            }
+
             let fila = $("<tr>");
-            fila.append(`<td>${datos.horas[i]}</td>`);
+            fila.append(`<td>${fechaHora.split("T")[1]}</td>`);
             fila.append(`<td>${datos.temperatura[i]}</td>`);
             fila.append(`<td>${datos.sensacionTermica[i]}</td>`);
             fila.append(`<td>${datos.lluvia[i]}</td>`);
@@ -172,6 +189,7 @@ class Ciudad {
             fila.append(`<td>${datos.vientoDireccion[i]}</td>`);
             tbody.append(fila);
         }
+
         tabla.append(tbody);
         section.append(tabla);
         $("body").append(section);
