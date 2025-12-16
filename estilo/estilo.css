@@ -47,3 +47,23 @@ a {
 li a {
     color: #0000EE;
 }
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+    background-color: #FFFFFF;
+}
+
+
+thead {
+    background-color: #0D1B2A;
+    color: #FFFFFF;
+}
+
+th,
+td {
+    border: 1px solid #CCCCCC;
+    padding: 0.5em;
+    text-align: center;
+}

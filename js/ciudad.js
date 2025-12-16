@@ -147,7 +147,7 @@ class Ciudad {
 
     mostrarMeteorologiaEntrenos() {
         let section = $("<section>").attr("id", "meteorologiaEntrenos");
-        section.append("<h2>Meteorología día de la carrera</h2>");
+        section.append("<h2>Meteorología dias de entrenamientos</h2>");
 
         section.append(`<p><strong>Amanecer:</strong> ${this.meteorologiaEntrenos.amanecer}</p>`);
         section.append(`<p><strong>Atardecer:</strong> ${this.meteorologiaEntrenos.atardecer}</p>`);
